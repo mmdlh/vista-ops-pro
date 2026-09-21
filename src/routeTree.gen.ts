@@ -10,33 +10,128 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AlarmsRouteImport } from './routes/alarms'
+import { Route as AssetsRouteImport } from './routes/assets'
+import { Route as DiagnosticsRouteImport } from './routes/diagnostics'
+import { Route as InspectionRouteImport } from './routes/inspection'
+import { Route as SettingsRouteImport } from './routes/settings'
+import { Route as SparePartsRouteImport } from './routes/spare-parts'
+import { Route as TelemetryRouteImport } from './routes/telemetry'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AlarmsRoute = AlarmsRouteImport.update({
+  id: '/alarms',
+  path: '/alarms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AssetsRoute = AssetsRouteImport.update({
+  id: '/assets',
+  path: '/assets',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DiagnosticsRoute = DiagnosticsRouteImport.update({
+  id: '/diagnostics',
+  path: '/diagnostics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InspectionRoute = InspectionRouteImport.update({
+  id: '/inspection',
+  path: '/inspection',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SettingsRoute = SettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SparePartsRoute = SparePartsRouteImport.update({
+  id: '/spare-parts',
+  path: '/spare-parts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TelemetryRoute = TelemetryRouteImport.update({
+  id: '/telemetry',
+  path: '/telemetry',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/alarms': typeof AlarmsRoute
+  '/assets': typeof AssetsRoute
+  '/diagnostics': typeof DiagnosticsRoute
+  '/inspection': typeof InspectionRoute
+  '/settings': typeof SettingsRoute
+  '/spare-parts': typeof SparePartsRoute
+  '/telemetry': typeof TelemetryRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/alarms': typeof AlarmsRoute
+  '/assets': typeof AssetsRoute
+  '/diagnostics': typeof DiagnosticsRoute
+  '/inspection': typeof InspectionRoute
+  '/settings': typeof SettingsRoute
+  '/spare-parts': typeof SparePartsRoute
+  '/telemetry': typeof TelemetryRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/alarms': typeof AlarmsRoute
+  '/assets': typeof AssetsRoute
+  '/diagnostics': typeof DiagnosticsRoute
+  '/inspection': typeof InspectionRoute
+  '/settings': typeof SettingsRoute
+  '/spare-parts': typeof SparePartsRoute
+  '/telemetry': typeof TelemetryRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/alarms'
+    | '/assets'
+    | '/diagnostics'
+    | '/inspection'
+    | '/settings'
+    | '/spare-parts'
+    | '/telemetry'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/alarms'
+    | '/assets'
+    | '/diagnostics'
+    | '/inspection'
+    | '/settings'
+    | '/spare-parts'
+    | '/telemetry'
+  id:
+    | '__root__'
+    | '/'
+    | '/alarms'
+    | '/assets'
+    | '/diagnostics'
+    | '/inspection'
+    | '/settings'
+    | '/spare-parts'
+    | '/telemetry'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AlarmsRoute: typeof AlarmsRoute
+  AssetsRoute: typeof AssetsRoute
+  DiagnosticsRoute: typeof DiagnosticsRoute
+  InspectionRoute: typeof InspectionRoute
+  SettingsRoute: typeof SettingsRoute
+  SparePartsRoute: typeof SparePartsRoute
+  TelemetryRoute: typeof TelemetryRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +143,67 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/alarms': {
+      id: '/alarms'
+      path: '/alarms'
+      fullPath: '/alarms'
+      preLoaderRoute: typeof AlarmsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/assets': {
+      id: '/assets'
+      path: '/assets'
+      fullPath: '/assets'
+      preLoaderRoute: typeof AssetsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/diagnostics': {
+      id: '/diagnostics'
+      path: '/diagnostics'
+      fullPath: '/diagnostics'
+      preLoaderRoute: typeof DiagnosticsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/inspection': {
+      id: '/inspection'
+      path: '/inspection'
+      fullPath: '/inspection'
+      preLoaderRoute: typeof InspectionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/spare-parts': {
+      id: '/spare-parts'
+      path: '/spare-parts'
+      fullPath: '/spare-parts'
+      preLoaderRoute: typeof SparePartsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/telemetry': {
+      id: '/telemetry'
+      path: '/telemetry'
+      fullPath: '/telemetry'
+      preLoaderRoute: typeof TelemetryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AlarmsRoute: AlarmsRoute,
+  AssetsRoute: AssetsRoute,
+  DiagnosticsRoute: DiagnosticsRoute,
+  InspectionRoute: InspectionRoute,
+  SettingsRoute: SettingsRoute,
+  SparePartsRoute: SparePartsRoute,
+  TelemetryRoute: TelemetryRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
