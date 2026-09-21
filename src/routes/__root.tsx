@@ -77,10 +77,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "智维云设备运维平台" },
+      { title: "设备运维平台" },
       { name: "description", content: "智能设备运维管理与实时监控平台。" },
-      { name: "author", content: "智维云" },
-      { property: "og:title", content: "智维云设备运维平台" },
+      { name: "author", content: "设备运维平台" },
+      { property: "og:title", content: "设备运维平台" },
       { property: "og:description", content: "智能设备运维管理与实时监控平台。" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

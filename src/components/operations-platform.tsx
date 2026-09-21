@@ -69,7 +69,7 @@ export function Platform({ page }: { page: PageKey }) {
         <div className="flex h-16 items-center gap-5 px-4 lg:px-6">
           <Link to="/" className="flex shrink-0 items-center gap-3">
             <span className="grid size-9 place-items-center rounded-lg bg-primary text-primary-foreground shadow-glow"><Factory className="size-5" /></span>
-            <span><strong className="block text-[15px] font-bold text-foreground">智维云 · OPS</strong><span className="flex items-center gap-1.5 text-[10px] text-success"><i className="status-dot" />系统运行正常</span></span>
+            <span><strong className="block text-[15px] font-bold text-foreground">设备运维平台</strong><span className="flex items-center gap-1.5 text-[10px] text-success"><i className="status-dot" />系统运行正常</span></span>
           </Link>
           <nav className="hidden min-w-0 flex-1 items-center justify-center gap-1 xl:flex">
             {nav.map((item) => <Link key={item.key} to={item.to} className={`nav-item ${page === item.key ? "nav-active" : ""}`}><item.icon className="size-4" /><span>{item.label}</span></Link>)}
