@@ -46,7 +46,7 @@ export function EChart({ option, className = "h-72" }: { option: EChartsOption; 
       if (disposed || !target.current) return;
       chart = echarts.init(target.current);
       const base: EChartsOption = {
-        color: palette,
+        color: [...palette],
         animationDuration: 900,
         textStyle: { fontFamily: "Rajdhani, system-ui, sans-serif", color: "#52657a" },
         tooltip: { trigger: "axis", backgroundColor: "rgba(255,255,255,.96)", borderColor: "#d7e9ff", textStyle: { color: "#18334f" } },
