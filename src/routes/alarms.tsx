@@ -1,0 +1,2 @@
+import { createFileRoute } from "@tanstack/react-router"; import { Platform } from "@/components/operations-platform";
+export const Route = createFileRoute("/alarms")({ head: () => ({ meta: [{ title: "告警调度中心 — 智维云" }, { name: "description", content: "设备告警研判、派单与工单闭环管理。" }, { property: "og:title", content: "告警调度中心 — 智维云" }, { property: "og:description", content: "设备告警研判、派单与工单闭环管理。" }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: () => <Platform page="alarms" /> });

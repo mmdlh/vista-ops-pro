@@ -1,0 +1,2 @@
+import { createFileRoute } from "@tanstack/react-router"; import { Platform } from "@/components/operations-platform";
+export const Route = createFileRoute("/diagnostics")({ head: () => ({ meta: [{ title: "能效健康诊断 — 智维云" }, { name: "description", content: "能耗、衰退趋势、根因与节能策略分析。" }, { property: "og:title", content: "能效健康诊断 — 智维云" }, { property: "og:description", content: "能耗、衰退趋势、根因与节能策略分析。" }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: () => <Platform page="diagnostics" /> });

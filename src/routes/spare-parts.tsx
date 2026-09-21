@@ -1,0 +1,2 @@
+import { createFileRoute } from "@tanstack/react-router"; import { Platform } from "@/components/operations-platform";
+export const Route = createFileRoute("/spare-parts")({ head: () => ({ meta: [{ title: "备品备件仓储 — 智维云" }, { name: "description", content: "备件安全库存、出入库与批次追踪。" }, { property: "og:title", content: "备品备件仓储 — 智维云" }, { property: "og:description", content: "备件安全库存、出入库与批次追踪。" }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: () => <Platform page="spares" /> });
