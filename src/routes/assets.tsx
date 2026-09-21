@@ -1,0 +1,2 @@
+import { createFileRoute } from "@tanstack/react-router"; import { Platform } from "@/components/operations-platform";
+export const Route = createFileRoute("/assets")({ head: () => ({ meta: [{ title: "设备资产台账 — 智维云" }, { name: "description", content: "设备全生命周期资产台账与状态管理。" }, { property: "og:title", content: "设备资产台账 — 智维云" }, { property: "og:description", content: "设备全生命周期资产台账与状态管理。" }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: () => <Platform page="assets" /> });
